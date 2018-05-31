@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+    <script type="text/javascript">
+      function lifeSite() {
+        var start = new Date('May 31, 2018'); // Дата создания сайта
+        var end = new Date();
+        var life = Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+        var suffix = new Array("day", "days", "days");
+        var keys = [2, 0, 1, 1, 1, 2];
+        var mod = life % 100;
+        var suffix_key = mod > 4 && mod < 20 ? 2 : keys[Math.min(mod % 10, 5)];
+        document.getElementById("life_site").innerHTML = life + " " + suffix[suffix_key];
+      }
+
+    </script>
+    <title>Metallica Links</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body onload="lifeSite()">
+
+    <div id="basic">
+
+
+      <div id="menu-top">
+        <div class="bg-1">
+          <ul>
+            <li><a href="index.html">Home page</a></li>
+            <li><a href="discography.html">discography</a></li>
+            <li><a href="awards.html">awards</a></li>
+            <li><a href="facts.html">facts</a></li>
+            <li><a href="links.html">links</a></li>
+	    <li><a href="life.html">life</a></li>
+	    <li><a href="gallery.html">Photos</a></li>
+          </ul>
+        </div>
+        <div class="bg-1"></div>
+        <p>That site lives for: <span id="life_site" style="color: #0a0; font-size: 120%; font-weight: bold;"></span></p>
+
+      </div>
+
+    </div>
+
+
+  </body>
+
+
+</html>
